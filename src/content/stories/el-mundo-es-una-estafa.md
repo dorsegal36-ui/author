@@ -1,6 +1,7 @@
 ---
 title: "El mundo es una estafa"
 language: "spanish"
+writtenAt: "2024-12-31"
 publishedAt: "2026-05-13"
 draft: false
 sourceFile: "El mundo es una estafa.odt"

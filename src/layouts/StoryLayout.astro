@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import { isRtl, languageLabels, type Story } from '@/lib/stories';
+import { formatWrittenYear } from '@/lib/storyDates.mjs';
 
 interface Props {
   story: Story;
@@ -13,6 +14,7 @@ const published = story.data.publishedAt.toLocaleDateString('en', {
   month: 'long',
   day: 'numeric'
 });
+const writtenYear = formatWrittenYear(story.data.writtenAt);
 ---
 
 <BaseLayout title={story.data.title} description={`Read ${story.data.title}.`}>
@@ -21,6 +23,7 @@ const published = story.data.publishedAt.toLocaleDateString('en', {
     <header class="story-heading">
       <p class="eyebrow">{languageLabels[story.data.language]} | {published}</p>
       <h1>{story.data.title}</h1>
+      <p class="story-year">{writtenYear}</p>
     </header>
     <div class="story-body">
       <slot />

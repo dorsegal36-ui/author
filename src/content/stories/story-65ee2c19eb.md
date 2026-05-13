@@ -1,6 +1,7 @@
 ---
 title: "אני מעריץ אנשים עד הרגע שבו הם פותחים את הפה"
 language: "hebrew"
+writtenAt: "2024-02-09"
 publishedAt: "2026-05-13"
 draft: false
 sourceFile: "אני מעריץ אנשים עד הרגע שבו הם פותחים את הפה.docx"

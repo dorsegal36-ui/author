@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getPublishedStories, getStorySlug, languageLabels, storiesByLanguage } from '@/lib/stories';
+import { formatWrittenYear } from '@/lib/storyDates.mjs';
 
 const stories = await getPublishedStories();
 const groups = storiesByLanguage(stories);
@@ -27,7 +28,7 @@ const groups = storiesByLanguage(stories);
                 dir={story.data.language === 'hebrew' ? 'rtl' : 'ltr'}
               >
                 <strong>{story.data.title}</strong>
-                <span>{languageLabels[story.data.language]}</span>
+                <span>{languageLabels[story.data.language]} | {formatWrittenYear(story.data.writtenAt)}</span>
               </a>
             ))}
           </div>

@@ -1,6 +1,7 @@
 ---
 title: "monologo"
 language: "hebrew"
+writtenAt: "2024-02-06"
 publishedAt: "2026-05-13"
 draft: false
 sourceFile: "monologo.docx"

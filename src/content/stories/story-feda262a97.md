@@ -1,6 +1,7 @@
 ---
 title: "מונולוג לפודקאסט"
 language: "hebrew"
+writtenAt: "2023-02-16"
 publishedAt: "2026-05-13"
 draft: false
 sourceFile: "מונולוג לפודקאסט.docx"

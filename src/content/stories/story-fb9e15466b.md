@@ -1,6 +1,7 @@
 ---
 title: "כלא"
 language: "hebrew"
+writtenAt: "2023-07-25"
 publishedAt: "2026-05-13"
 draft: false
 sourceFile: "כלא.docx"

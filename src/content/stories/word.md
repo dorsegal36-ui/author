@@ -1,6 +1,7 @@
 ---
 title: "word"
 language: "spanish"
+writtenAt: "2023-02-13"
 publishedAt: "2026-05-13"
 draft: false
 sourceFile: "word.docx"

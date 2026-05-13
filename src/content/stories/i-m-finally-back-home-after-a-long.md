@@ -1,6 +1,7 @@
 ---
 title: "I'm finally back home after a long"
 language: "english"
+writtenAt: "2026-05-12"
 publishedAt: "2026-05-13"
 draft: false
 sourceFile: "I'm finally back home after a long.txt"

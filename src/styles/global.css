@@ -104,10 +104,15 @@ a {
 
 .language-card span,
 .story-card span,
-.eyebrow {
+.eyebrow,
+.story-year {
   color: var(--muted);
   font-family: system-ui, sans-serif;
   font-size: 0.9rem;
+}
+
+.story-year {
+  margin: 1rem 0 0;
 }
 
 .section-title {

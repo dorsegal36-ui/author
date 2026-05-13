@@ -7,6 +7,7 @@
     "dev": "astro dev --host 127.0.0.1",
     "build": "astro check && astro build",
     "preview": "astro preview --host 127.0.0.1",
+    "test": "node --test src/lib/*.test.mjs",
     "import:stories": "node scripts/import-stories.mjs"
   },
   "dependencies": {

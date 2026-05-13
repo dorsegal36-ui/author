@@ -1,6 +1,7 @@
 ---
 title: "Personas solares"
 language: "spanish"
+writtenAt: "2025-04-11"
 publishedAt: "2026-05-13"
 draft: false
 sourceFile: "Personas solares.odt"

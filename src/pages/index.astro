@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getPublishedStories, getStorySlug, languageLabels, storiesByLanguage } from '@/lib/stories';
+import { formatWrittenYear } from '@/lib/storyDates.mjs';
 
 const stories = await getPublishedStories();
 const groups = storiesByLanguage(stories);
@@ -33,7 +34,7 @@ const recent = stories.slice(0, 5);
         recent.map((story) => (
           <a class="story-card" href={`/stories/${getStorySlug(story)}`}>
             <strong>{story.data.title}</strong>
-            <span>{languageLabels[story.data.language]}</span>
+            <span>{languageLabels[story.data.language]} | {formatWrittenYear(story.data.writtenAt)}</span>
           </a>
         ))
       }

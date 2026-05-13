@@ -1,6 +1,7 @@
 ---
 title: "ארבע חזיתות"
 language: "hebrew"
+writtenAt: "2024-11-21"
 publishedAt: "2026-05-13"
 draft: false
 sourceFile: "ארבע חזיתות.docx"

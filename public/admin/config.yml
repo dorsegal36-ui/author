@@ -21,6 +21,7 @@ collections:
           - { label: English, value: english }
           - { label: Spanish, value: spanish }
           - { label: Hebrew, value: hebrew }
+      - { label: Written At, name: writtenAt, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
       - { label: Published At, name: publishedAt, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
       - { label: Draft, name: draft, widget: boolean, default: false }
       - { label: Source File, name: sourceFile, widget: string, required: false }

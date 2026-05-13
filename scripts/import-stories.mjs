@@ -114,6 +114,7 @@ async function main() {
 
   for (const filename of files) {
     const filePath = path.join(root, filename);
+    const stats = await fs.stat(filePath);
     const title = path.basename(filename, path.extname(filename));
     const raw = (await readStory(filePath)).trim();
     if (!raw) {
@@ -133,7 +134,8 @@ async function main() {
       .filter(Boolean)
       .join('\n\n');
 
-    const markdown = `---\ntitle: "${yamlEscape(title)}"\nlanguage: "${language}"\npublishedAt: "${today}"\ndraft: false\nsourceFile: "${yamlEscape(filename)}"\n---\n\n${body}\n`;
+    const writtenAt = stats.mtime.toISOString().slice(0, 10);
+    const markdown = `---\ntitle: "${yamlEscape(title)}"\nlanguage: "${language}"\nwrittenAt: "${writtenAt}"\npublishedAt: "${today}"\ndraft: false\nsourceFile: "${yamlEscape(filename)}"\n---\n\n${body}\n`;
 
     await fs.writeFile(path.join(outputDir, `${slug}.md`), markdown, 'utf8');
     console.log(`Imported ${filename} -> ${slug}.md`);

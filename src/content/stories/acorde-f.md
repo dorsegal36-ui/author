@@ -1,6 +1,7 @@
 ---
 title: "Acorde F"
 language: "spanish"
+writtenAt: "2024-02-09"
 publishedAt: "2026-05-13"
 draft: false
 sourceFile: "Acorde F.docx"

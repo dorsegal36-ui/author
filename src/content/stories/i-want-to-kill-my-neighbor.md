@@ -1,6 +1,7 @@
 ---
 title: "I want to kill my neighbor"
 language: "english"
+writtenAt: "2024-02-09"
 publishedAt: "2026-05-13"
 draft: false
 sourceFile: "I want to kill my neighbor.docx"
