@@ -1,10 +1,11 @@
 :root {
   color-scheme: light;
-  --bg: #f7f3ec;
-  --paper: #fffdf8;
-  --ink: #1f1d1a;
-  --muted: #6f675f;
-  --line: #ddd2c3;
+  --bg: #f6efe4;
+  --paper: #fffaf1;
+  --paper-soft: #fbf4e9;
+  --ink: #242018;
+  --muted: #73685c;
+  --line: #e3d4c1;
   --accent: #285f68;
   --accent-strong: #183f46;
   font-family: Georgia, "Times New Roman", serif;
@@ -16,8 +17,11 @@
 
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 241, 0.78), rgba(246, 239, 228, 0) 18rem),
+    var(--bg);
   color: var(--ink);
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -33,7 +37,7 @@ a {
   gap: 1rem;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 1.35rem 1.25rem 0.75rem;
   font-family: system-ui, sans-serif;
 }
 
@@ -49,13 +53,26 @@ a {
   font-size: 0.95rem;
 }
 
+.site-header nav a {
+  color: var(--muted);
+  text-decoration-color: transparent;
+  transition:
+    color 160ms ease,
+    text-decoration-color 160ms ease;
+}
+
+.site-header nav a:hover {
+  color: var(--accent-strong);
+  text-decoration-color: currentColor;
+}
+
 .hero,
 .library,
 .story-page,
 .comments-wrap {
   max-width: 880px;
   margin: 0 auto;
-  padding: 2rem 1.25rem;
+  padding: 2.5rem 1.25rem;
 }
 
 .hero h1,
@@ -91,8 +108,17 @@ a {
 .story-card {
   display: block;
   border-top: 1px solid var(--line);
-  padding: 1rem 0;
+  padding: 1.1rem 0;
   text-decoration: none;
+  transition:
+    border-color 160ms ease,
+    padding-left 160ms ease;
+}
+
+.language-card:hover,
+.story-card:hover {
+  border-color: #c9b49b;
+  padding-left: 0.35rem;
 }
 
 .language-card strong,
@@ -147,24 +173,30 @@ a {
 }
 
 .story-page {
-  max-width: 760px;
+  max-width: 720px;
 }
 
 .story-body {
-  margin-top: 2rem;
-  background: var(--paper);
+  margin-top: 2.25rem;
+  background: linear-gradient(180deg, var(--paper), var(--paper-soft));
   border: 1px solid var(--line);
-  padding: clamp(1.25rem, 4vw, 3rem);
-  font-size: 1.25rem;
-  line-height: 1.85;
+  border-radius: 6px;
+  box-shadow: 0 18px 45px rgba(69, 50, 31, 0.08);
+  padding: clamp(1.4rem, 5vw, 3.4rem);
+  font-size: clamp(1.08rem, 1rem + 0.35vw, 1.28rem);
+  line-height: 1.9;
 }
 
 .story-body p {
-  margin: 0 0 1.25em;
+  margin: 0 0 1.35em;
+}
+
+.story-body p:last-child {
+  margin-bottom: 0;
 }
 
 .comments-wrap {
-  max-width: 760px;
+  max-width: 720px;
   padding-top: 0;
 }
 
@@ -175,6 +207,9 @@ a {
   }
 
   .story-body {
-    font-size: 1.1rem;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 }
