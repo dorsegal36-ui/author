@@ -1,15 +1,14 @@
 ---
-title: "A Juan le importa demasiado"
-language: "spanish"
-writtenAt: "2024-02-12"
-publishedAt: "2026-05-13"
+title: A Juan le importa demasiado
+language: spanish
+writtenAt: 2024-02-12
+publishedAt: 2026-05-13
 draft: false
-sourceFile: "A Juan le importa demasiado.docx"
+sourceFile: A Juan le importa demasiado.docx
 ---
-
 A Juan le importa demasiado
 
-¿Pero qué es lo que le importa demasiado? Es fácil, las cosas importantes. Quiero decir, a Juan le da igual si el volumen de la tele es impar o si su casa está desorganizada. Le importa la gente, le importa cualquier movimiento facial de la gente que se cruza por el por la calle. Ve todo y lo absorbe. Para Juan caminar por la calle es otra cosa. Cuando sale de su casa ve a su derecha una mujer que arrastra su maleta gigante en las escaleras, pero no sabe si ir a ayudarla o no porque tampoco la quiero molestar y luego se queda atascado unos segundos echando miradas hacia atrás mientras está pensando si debe dar la vuelta y ayudarle o no, y eso le pasa ¿nada más salir de su casa! Además, piensa mucho como acabáis de ver, y lo hace sobre las cosas más minúsculas como el señor que pide dinero a la salida del supermercado. Juan no sabe si saludarlo cada vez que entra o no, si darle dinero o no, si comprarle algo para comer o no, le da vergüenza darle dinero a alguien, le hace sentir superior y lo incomoda.
+¿Pero qué es lo quee le importa demasiado? Es fácil, las cosas importantes. Quiero decir, a Juan le da igual si el volumen de la tele es impar o si su casa está desorganizada. Le importa la gente, le importa cualquier movimiento facial de la gente que se cruza por el por la calle. Ve todo y lo absorbe. Para Juan caminar por la calle es otra cosa. Cuando sale de su casa ve a su derecha una mujer que arrastra su maleta gigante en las escaleras, pero no sabe si ir a ayudarla o no porque tampoco la quiero molestar y luego se queda atascado unos segundos echando miradas hacia atrás mientras está pensando si debe dar la vuelta y ayudarle o no, y eso le pasa ¿nada más salir de su casa! Además, piensa mucho como acabáis de ver, y lo hace sobre las cosas más minúsculas como el señor que pide dinero a la salida del supermercado. Juan no sabe si saludarlo cada vez que entra o no, si darle dinero o no, si comprarle algo para comer o no, le da vergüenza darle dinero a alguien, le hace sentir superior y lo incomoda.
 
 Intento cada vez de nuevo explicarle que lo más fácil será preguntar. En lugar de pensar tanto, pregunta a la señora si necesita ayuda, pregúntale al señor qué necesita del supermercado, pero le cuesta. Es demasiado riesgo empezar a hablar así con un desconocido. Demasiado riesgo de meterse en una conversación infinita, pero peor aún, riesgo de estar maltratado y Juan es un chico muy sensible que como ya sabemos, le importa demasiado, así que ya os podéis imaginar la facilidad que tiene para ofenderse.
 
