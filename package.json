@@ -1,0 +1,20 @@
+{
+  "name": "story-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro check && astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "import:stories": "node scripts/import-stories.mjs"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "adm-zip": "^0.5.16",
+    "astro": "^5.0.0",
+    "fast-xml-parser": "^4.5.0",
+    "mammoth": "^1.8.0",
+    "typescript": "^5.6.0"
+  }
+}

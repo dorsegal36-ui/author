@@ -1,0 +1,21 @@
+---
+import Comments from '@/components/Comments.astro';
+import StoryLayout from '@/layouts/StoryLayout.astro';
+import { getPublishedStories, getStorySlug } from '@/lib/stories';
+
+export async function getStaticPaths() {
+  const stories = await getPublishedStories();
+  return stories.map((story) => ({
+    params: { slug: getStorySlug(story) },
+    props: { story }
+  }));
+}
+
+const { story } = Astro.props;
+const { Content } = await story.render();
+---
+
+<StoryLayout story={story}>
+  <Content />
+  <Comments slot="comments" pageIdentifier={getStorySlug(story)} pageTitle={story.data.title} />
+</StoryLayout>

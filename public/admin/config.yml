@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/uploads
+public_folder: /uploads
+publish_mode: editorial_workflow
+
+collections:
+  - name: stories
+    label: Stories
+    folder: src/content/stories
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - label: Language
+        name: language
+        widget: select
+        options:
+          - { label: English, value: english }
+          - { label: Spanish, value: spanish }
+          - { label: Hebrew, value: hebrew }
+      - { label: Published At, name: publishedAt, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { label: Draft, name: draft, widget: boolean, default: false }
+      - { label: Source File, name: sourceFile, widget: string, required: false }
+      - { label: Body, name: body, widget: markdown }

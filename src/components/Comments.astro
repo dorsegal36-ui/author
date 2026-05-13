@@ -1,0 +1,32 @@
+---
+interface Props {
+  pageIdentifier: string;
+  pageTitle: string;
+}
+
+const { pageIdentifier, pageTitle } = Astro.props;
+const shortname = import.meta.env.PUBLIC_DISQUS_SHORTNAME;
+---
+
+{
+  shortname ? (
+    <>
+      <div id="disqus_thread" data-page-id={pageIdentifier} data-page-title={pageTitle}></div>
+      <script is:inline define:vars={{ shortname, pageIdentifier, pageTitle }}>
+        window.disqus_config = function () {
+          this.page.identifier = pageIdentifier;
+          this.page.title = pageTitle;
+          this.page.url = window.location.href;
+        };
+
+        const script = document.createElement('script');
+        script.src = `https://${shortname}.disqus.com/embed.js`;
+        script.setAttribute('data-timestamp', String(Date.now()));
+        document.body.appendChild(script);
+      </script>
+      <noscript>Please enable JavaScript to view comments.</noscript>
+    </>
+  ) : (
+    <p class="lede">Comments will appear here after Disqus is configured.</p>
+  )
+}

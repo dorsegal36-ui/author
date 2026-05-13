@@ -1,0 +1,32 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { isRtl, languageLabels, type Story } from '@/lib/stories';
+
+interface Props {
+  story: Story;
+}
+
+const { story } = Astro.props;
+const direction = isRtl(story.data.language) ? 'rtl' : 'ltr';
+const published = story.data.publishedAt.toLocaleDateString('en', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<BaseLayout title={story.data.title} description={`Read ${story.data.title}.`}>
+  <article class="story-page" dir={direction}>
+    <a class="back-link" href="/library">Back to library</a>
+    <header class="story-heading">
+      <p class="eyebrow">{languageLabels[story.data.language]} | {published}</p>
+      <h1>{story.data.title}</h1>
+    </header>
+    <div class="story-body">
+      <slot />
+    </div>
+  </article>
+  <section class="comments-wrap">
+    <slot name="comments" />
+  </section>
+</BaseLayout>

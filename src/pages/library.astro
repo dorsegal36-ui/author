@@ -1,0 +1,38 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getPublishedStories, getStorySlug, languageLabels, storiesByLanguage } from '@/lib/stories';
+
+const stories = await getPublishedStories();
+const groups = storiesByLanguage(stories);
+---
+
+<BaseLayout title="Library">
+  <section class="library">
+    <h1>Library</h1>
+    <p class="lede">Browse the archive by language.</p>
+
+    <nav class="filters" aria-label="Language filters">
+      {groups.map((group) => <a href={`#${group.language}`}>{group.label}</a>)}
+    </nav>
+
+    {
+      groups.map((group) => (
+        <section id={group.language}>
+          <h2 class="section-title">{group.label}</h2>
+          <div class="story-list">
+            {group.stories.map((story) => (
+              <a
+                class="story-card"
+                href={`/stories/${getStorySlug(story)}`}
+                dir={story.data.language === 'hebrew' ? 'rtl' : 'ltr'}
+              >
+                <strong>{story.data.title}</strong>
+                <span>{languageLabels[story.data.language]}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))
+    }
+  </section>
+</BaseLayout>

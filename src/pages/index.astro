@@ -1,0 +1,42 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getPublishedStories, getStorySlug, languageLabels, storiesByLanguage } from '@/lib/stories';
+
+const stories = await getPublishedStories();
+const groups = storiesByLanguage(stories);
+const recent = stories.slice(0, 5);
+---
+
+<BaseLayout title="Stories">
+  <section class="hero">
+    <h1>A quiet place for short stories.</h1>
+    <p class="lede">
+      A multilingual archive of fiction and fragments, organized for reading rather than scrolling.
+    </p>
+
+    <div class="language-grid" aria-label="Story languages">
+      {
+        groups.map((group) => (
+          <a class="language-card" href={`/library#${group.language}`}>
+            <strong>{group.label}</strong>
+            <span>
+              {group.stories.length} {group.stories.length === 1 ? 'story' : 'stories'}
+            </span>
+          </a>
+        ))
+      }
+    </div>
+
+    <h2 class="section-title">Recent stories</h2>
+    <div class="story-list">
+      {
+        recent.map((story) => (
+          <a class="story-card" href={`/stories/${getStorySlug(story)}`}>
+            <strong>{story.data.title}</strong>
+            <span>{languageLabels[story.data.language]}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
