@@ -8,7 +8,7 @@ test('normalizeStoryText preserves explicit paragraph breaks', () => {
   assert.equal(normalizeStoryText(raw), raw);
 });
 
-test('normalizeStoryText turns hard-wrapped prose into readable paragraphs', () => {
+test('normalizeStoryText turns hard-wrapped prose into longer readable paragraphs', () => {
   const raw = [
     'I came home late and the apartment felt smaller than usual.',
     'There were dishes in the sink and a message waiting for me.',
@@ -20,11 +20,7 @@ test('normalizeStoryText turns hard-wrapped prose into readable paragraphs', () 
 
   assert.equal(
     normalizeStoryText(raw),
-    [
-      'I came home late and the apartment felt smaller than usual. There were dishes in the sink and a message waiting for me. I did not want to answer it.',
-      'I walked around the room instead. The light from the street made everything look borrowed. By midnight I understood that I was not going to sleep.',
-      'So I sat at the table and wrote down what had happened.'
-    ].join('\n\n')
+    'I came home late and the apartment felt smaller than usual. There were dishes in the sink and a message waiting for me. I did not want to answer it. I walked around the room instead. The light from the street made everything look borrowed. By midnight I understood that I was not going to sleep. So I sat at the table and wrote down what had happened.'
   );
 });
 
@@ -32,4 +28,21 @@ test('normalizeStoryText preserves short line-based text', () => {
   const raw = 'first line\nsecond line\nthird line';
 
   assert.equal(normalizeStoryText(raw), raw);
+});
+
+test('normalizeStoryText can rebalance short prose paragraphs into longer reading blocks', () => {
+  const raw = [
+    'First short paragraph has a sentence.',
+    '',
+    'Second short paragraph continues the same scene.',
+    '',
+    'Third short paragraph still belongs with the same thought.',
+    '',
+    'Fourth short paragraph completes the reading block.'
+  ].join('\n');
+
+  assert.equal(
+    normalizeStoryText(raw, { rebalanceParagraphs: true }),
+    'First short paragraph has a sentence. Second short paragraph continues the same scene. Third short paragraph still belongs with the same thought. Fourth short paragraph completes the reading block.'
+  );
 });

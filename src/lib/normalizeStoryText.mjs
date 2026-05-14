@@ -30,7 +30,7 @@ function groupSentences(sentences) {
   for (const sentence of sentences) {
     const nextLength = currentLength + sentence.length + (current.length ? 1 : 0);
 
-    if (current.length >= 3 || nextLength > 260) {
+    if (current.length >= 10 || nextLength > 850) {
       paragraphs.push(current.join(' '));
       current = [];
       currentLength = 0;
@@ -56,12 +56,49 @@ function normalizeBlock(block) {
   return groupSentences(sentences).join('\n\n');
 }
 
-export function normalizeStoryText(raw) {
-  return raw
+function isMergeableProse(paragraph) {
+  return (
+    !paragraph.includes('\n') &&
+    paragraph.length < 420 &&
+    /[.!?…]["')\]\u00bb\u201d\u2019]?$/.test(paragraph) &&
+    !/^["'\u00ab\u201c]?[A-Z0-9][^.!?…]{0,80}$/.test(paragraph)
+  );
+}
+
+function rebalanceParagraphs(paragraphs) {
+  const balanced = [];
+  let current = '';
+
+  for (const paragraph of paragraphs) {
+    if (!isMergeableProse(paragraph)) {
+      if (current) {
+        balanced.push(current);
+        current = '';
+      }
+      balanced.push(paragraph);
+      continue;
+    }
+
+    const next = current ? `${current} ${paragraph}` : paragraph;
+    if (current && next.length > 850) {
+      balanced.push(current);
+      current = paragraph;
+    } else {
+      current = next;
+    }
+  }
+
+  if (current) balanced.push(current);
+  return balanced;
+}
+
+export function normalizeStoryText(raw, options = {}) {
+  const paragraphs = raw
     .replace(/\r\n?/g, '\n')
     .trim()
     .split(/\n{2,}/)
     .map(normalizeBlock)
-    .filter(Boolean)
-    .join('\n\n');
+    .filter(Boolean);
+
+  return (options.rebalanceParagraphs ? rebalanceParagraphs(paragraphs) : paragraphs).join('\n\n');
 }

@@ -12,6 +12,10 @@ function splitFrontmatter(markdown) {
   return { frontmatter: match[1], body: match[2] };
 }
 
+function comparable(markdown) {
+  return markdown.replace(/\r\n?/g, '\n');
+}
+
 async function main() {
   const entries = await fs.readdir(storiesDir, { withFileTypes: true });
   const files = entries
@@ -23,9 +27,9 @@ async function main() {
     const filePath = path.join(storiesDir, filename);
     const markdown = await fs.readFile(filePath, 'utf8');
     const { frontmatter, body } = splitFrontmatter(markdown);
-    const normalized = `${frontmatter}\n${normalizeStoryText(body)}\n`;
+    const normalized = `${frontmatter}\n${normalizeStoryText(body, { rebalanceParagraphs: true })}\n`;
 
-    if (normalized !== markdown) {
+    if (comparable(normalized) !== comparable(markdown)) {
       await fs.writeFile(filePath, normalized, 'utf8');
       console.log(`Normalized ${filename}`);
     }
