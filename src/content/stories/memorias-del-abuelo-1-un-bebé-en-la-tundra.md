@@ -19,10 +19,6 @@ Un año más tarde les nació un hijo suyo. Su alegría no tenía límites. Tamb
 
 Una vez, cuando el niño ya tenía dieciocho meses de edad, su madre salió de casa por unos minutos y lo dejó solo bajo la supervisión del niño adoptado. El niño adoptado tenía ya ocho años. Cuando se quedó solo con el bebé, se empezó a aburrir y decidió bajar la escopeta de la pared para jugar un poco con ella. Sin querer, apretó el gatillo. La escopeta estaba cargada y se escuchó un disparo. El proyectil pegó al bebé y lo mató. 
 
-Cuando la madre volvió, encontró al bebé muerto en medio de un charco de sangre. 
+Cuando la madre volvió, encontró al bebé muerto en medio de un charco de sangre. Lo que sucedió en el pueblo cuando la gente se enteró de la muerte del bebé fue indescriptible. Un luto bajó sobre la aldea, algunos lloraron como si fuera su propio hijo quien murió y el estado de los padres fue terrorífico. 
 
-Lo que sucedió en el pueblo cuando la gente se enteró de la muerte del bebé fue indescriptible. Un luto bajó sobre la aldea, algunos lloraron como si fuera su propio hijo quien murió y el estado de los padres fue terrorífico. 
-
-El culpable de la tragedia, por supuesto, era el director del colegio que guardaba en casa una escopeta cargada. 
-
-Este incidente me causó, en aquel momento un muchacho de veinte años, una impresión tan horrible que incluso hoy cuando tengo ya ochenta años, cuando me acuerdo de él, me hace temblar.
+El culpable de la tragedia, por supuesto, era el director del colegio que guardaba en casa una escopeta cargada. Este incidente me causó, en aquel momento un muchacho de veinte años, una impresión tan horrible que incluso hoy cuando tengo ya ochenta años, cuando me acuerdo de él, me hace temblar.
