@@ -13,4 +13,10 @@ Mi tipo favorito son las personas solares. Es gente que produce tanta energía q
 
 Yo tuve la suerte de conocer algunas personas solares al largo de mi vida y las echo mucho de menos.
 
-Una persona solar es alguien que no necesita la energía de los demás para brillar y tiene la capacidad de calentar a todo so entorno sin hacer ningún esfuerzo. Son personas que cuando ríen, lo hacen con todo el corazón y lo hacen con tanto entusiasmo que da envidia y contagia a toda la gente a su alrededor y así iluminan el mundo. Su forma de contar una historia o de pasar un buen momento es como los niños pequeños que todavía no han conocido los aspectos menos agradables de la vida como el cinismo. Son personas optimistas y empáticas que dejan tres ellas un rastro de oxigeno como un árbol que hace la fotosíntesis.
+Una persona solar es alguien que no necesita la energía de los demás para brillar y tiene la capacidad de calentar a todo so entorno sin hacer ningún esfuerzo.
+
+Son personas que cuando ríen, lo hacen con todo el corazón y lo hacen con tanto entusiasmo que da envidia y contagia a toda la gente a su alrededor y así iluminan el mundo.
+
+Su forma de contar una historia o de pasar un buen momento es como los niños pequeños que todavía no han conocido los aspectos menos agradables de la vida como el cinismo.
+
+Son personas optimistas y empáticas que dejan tres ellas un rastro de oxigeno como un árbol que hace la fotosíntesis.

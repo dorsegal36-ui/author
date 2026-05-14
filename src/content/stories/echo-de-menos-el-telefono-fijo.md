@@ -9,12 +9,34 @@ sourceFile: "Echo de menos el teléfono fijo.docx"
 
 Echo de menos el teléfono fijo
 
-El año es 2024 y ni siquiera tengo un teléfono fijo en case, lo que quizás no sea una gran sorpresa, pero si que lo es, porque hace 20 años cuando era niño, jamás podría imaginarme un mundo en el que los teléfonos fijos ya no hagan falta en las casas. Cuando era niño y sonaba el teléfono, inmediatamente empezó una competición entre mis hermanos y yo, quien será el primero en llegar y cogerlo, porque para nosotros este sonido del teléfono fue como recibir un regalo. No sabes lo que habrá dentro, pero seguro que será más interesante de lo que estabas haciendo antes. Y ahora, sólo veinte años después cuando suena el teléfono en la casa de mis padres, hay una competición para no coger el teléfono, nadie lo quiere hacer, primero porque sabemos que no podrían ser nuestros amigos ya que nuestra generación ha abandonado casi por completo las llamadas, y segundo porque las llamadas nos quitan la libertad. Nos obligan en un determinado momento que no hayamos elegido, abandonar todo y dedicar un tiempo indefinido a una persona cuya identidad no sabemos antes de responder. Me parece lógico que no queramos hacerlo, pero todo eso tiene un lado negativo, muy negativo diría.
+El año es 2024 y ni siquiera tengo un teléfono fijo en case, lo que quizás no sea una gran sorpresa, pero si que lo es, porque hace 20 años cuando era niño, jamás podría imaginarme un mundo en el que los teléfonos fijos ya no hagan falta en las casas.
+
+Cuando era niño y sonaba el teléfono, inmediatamente empezó una competición entre mis hermanos y yo, quien será el primero en llegar y cogerlo, porque para nosotros este sonido del teléfono fue como recibir un regalo.
+
+No sabes lo que habrá dentro, pero seguro que será más interesante de lo que estabas haciendo antes.
+
+Y ahora, sólo veinte años después cuando suena el teléfono en la casa de mis padres, hay una competición para no coger el teléfono, nadie lo quiere hacer, primero porque sabemos que no podrían ser nuestros amigos ya que nuestra generación ha abandonado casi por completo las llamadas, y segundo porque las llamadas nos quitan la libertad.
+
+Nos obligan en un determinado momento que no hayamos elegido, abandonar todo y dedicar un tiempo indefinido a una persona cuya identidad no sabemos antes de responder.
+
+Me parece lógico que no queramos hacerlo, pero todo eso tiene un lado negativo, muy negativo diría.
 
 Yo quiero ver a una chica, y teniendo en cuenta que solo no vimos una vez, será muy pesado por mi parte llamarla, así que voy a tener que pasar por todo el proceso agotador de mandarle un mensaje algo casual al que quizás tarde unas horas o días en contestar para luego hacer otra pregunta casual y solo después de un pequeño pingpong de mensaje sería el momento adecuado para proponerle quedar, y otra vez me tocará esperar un tiempo indefinido hasta que llegue su respuesta, y no se me da muy bien esperar en estas situaciones.
 
-El maldito WhatsApp nos ha cambiado la vida por completo. Recuerdo que de niño cuando quería ver a mis amigos, llamé a su casa (esperando que sean ellos los que cojan el teléfono), siempre lo han cogido sus hermanos y sus padres que tenían maneras muy raras de saludar, pero unos segundos después ya llegué a hablar con mi querido amigo para decirle que dentro de una hora nos unimos en el campo de fútbol y que, si no le molesta, que avise también a fulanito. Solo con pensarlo me hago muy nostálgico. Qué sencillo, que eficiente.
+El maldito WhatsApp nos ha cambiado la vida por completo.
 
-Desde que salió el WhatsApp nos hemos convertido en esclavos del móvil, que, además, ahora va con nosotros a todas partes, así que incluso cuando salimos nos acompaña. Nos convirtió en esclavos porque ahora en lugar de hacer quizás tres o cuatro llamadas al día, hoy escribimos centenas de mensajes al día y recibimos un número parecido. Es una locura, porque al final muchos de estos mensajes son tonterías y son sólo algo formal antes de llegar al grano, pero lo peor es que a veces la gente tarda tanto tiempo en responder que ya no es relevante cuando lo hacen. Tampoco quisiera vivir en un mundo donde todos estén obligados a contestar los mensajes al instante, porque eso será de verdad una esclavitud, pero una sencilla llamada con la petición “¿hola, quieres ir conmigo al cine?” con una respuesta en el otro lado del aparato, se ha convertido en toda una tortura, por lo menos para mí.
+Recuerdo que de niño cuando quería ver a mis amigos, llamé a su casa (esperando que sean ellos los que cojan el teléfono), siempre lo han cogido sus hermanos y sus padres que tenían maneras muy raras de saludar, pero unos segundos después ya llegué a hablar con mi querido amigo para decirle que dentro de una hora nos unimos en el campo de fútbol y que, si no le molesta, que avise también a fulanito.
+
+Solo con pensarlo me hago muy nostálgico. Qué sencillo, que eficiente.
+
+Desde que salió el WhatsApp nos hemos convertido en esclavos del móvil, que, además, ahora va con nosotros a todas partes, así que incluso cuando salimos nos acompaña.
+
+Nos convirtió en esclavos porque ahora en lugar de hacer quizás tres o cuatro llamadas al día, hoy escribimos centenas de mensajes al día y recibimos un número parecido.
+
+Es una locura, porque al final muchos de estos mensajes son tonterías y son sólo algo formal antes de llegar al grano, pero lo peor es que a veces la gente tarda tanto tiempo en responder que ya no es relevante cuando lo hacen.
+
+Tampoco quisiera vivir en un mundo donde todos estén obligados a contestar los mensajes al instante, porque eso será de verdad una esclavitud, pero una sencilla llamada con la petición “¿hola, quieres ir conmigo al cine?”
+
+con una respuesta en el otro lado del aparato, se ha convertido en toda una tortura, por lo menos para mí.
 
 El mundo está mucho mejor ahora, en muchos sentidos y no quisiera volver veinte años atrás, pero me parece que algunas cosas se podrían haber mantenido, sobre todo las cosas que mantenían el contacto humano como algo más disponible y no tan distante y frío como hoy. Echo de menos el teléfono fijo, porque para mí representa algo ingenuo y cálido que ya no existe. Un acceso directo a la gente que ya no existe, un atajo de toda la vida que de repente un día el ayuntamiento te bloqueó y ahora te toca dar una vuelta larguísima hacia donde querías llegar.

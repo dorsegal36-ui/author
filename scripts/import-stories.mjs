@@ -5,6 +5,7 @@ import process from 'node:process';
 import mammoth from 'mammoth';
 import AdmZip from 'adm-zip';
 import { XMLParser } from 'fast-xml-parser';
+import { normalizeStoryText } from '../src/lib/normalizeStoryText.mjs';
 
 const root = process.cwd();
 const outputDir = path.join(root, 'src', 'content', 'stories');
@@ -127,12 +128,7 @@ async function main() {
     while (seen.has(slug)) slug = `${slug}-copy`;
     seen.add(slug);
 
-    const body = raw
-      .replace(/\r\n/g, '\n')
-      .split(/\n{2,}/)
-      .map((paragraph) => paragraph.trim())
-      .filter(Boolean)
-      .join('\n\n');
+    const body = normalizeStoryText(raw);
 
     const writtenAt = stats.mtime.toISOString().slice(0, 10);
     const markdown = `---\ntitle: "${yamlEscape(title)}"\nlanguage: "${language}"\nwrittenAt: "${writtenAt}"\npublishedAt: "${today}"\ndraft: false\nsourceFile: "${yamlEscape(filename)}"\n---\n\n${body}\n`;
