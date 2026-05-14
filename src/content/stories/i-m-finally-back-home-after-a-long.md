@@ -1,12 +1,11 @@
 ---
-title: "I'm finally back home after a long"
-language: "english"
-writtenAt: "2026-05-12"
-publishedAt: "2026-05-13"
+title: "I'm finally back home "
+language: english
+writtenAt: 2026-05-12
+publishedAt: 2026-05-13
 draft: false
-sourceFile: "I'm finally back home after a long.txt"
+sourceFile: I'm finally back home after a long.txt
 ---
-
 I'm finally back home after a long time. But Saturday after-noon,
 my friend Jack calls me and says he's coming to town with his girlfriend
 and he'd like to stay with her in my place if it's ok. "We're really looking
@@ -52,7 +51,7 @@ she might steal his semen and oblige him to marry her or the one time he told me
 Every time I hear her name I see her seating on the couch piling another spoon with ice
 cream into her big mouth. Jack shouldn't have told me that story. I'd be happy to stay
 with the memory of how the amazing dinner she cooked on the first time I visited them
-in their new house and how hard she tried to make me feel comfortable.  
+in their new house and how hard she tried to make me feel comfortable.\
 After a while, twenty minutes or so I start making the bed for them. They'll be coming 
 the day after tomorrow and my apartment is a mess. I choose my least favourite bedding set
 for them and move my moms framed picture to my room. I look at my apartment and it seems 
@@ -129,5 +128,4 @@ piece of tomato on her cheek. Neither of them noticed it. Then he turned towards
 it reminds me of all the good times we had together." He glances at Lily and then turns back to me "Lily's back on her
 medication and she's constantly talking about having a baby. I don't know. I don't know if she's the one. We have
 great sex and I can stare at her naked butt all day long, but I'm not ready you know?" He doesn't wait for me to reply,
-"This time it's different. She promissed me she'd stop being jealous. She's taking her medications and I see how it
-calms her. She did gain some weight I'm sure you noticed, but hey, no one is perfect and I think I really love her."
+"This time it's different. She promissed me she'd stop being jealous. She's taking her medications and I see how it calms her. She did gain some weight I'm sure you noticed, but hey, no one is perfect and I think I really love her." While Jack keeps talking to me I look outside the window and I notice a guy trying to take his coat off. Jack's words were
