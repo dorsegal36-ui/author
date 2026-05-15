@@ -9,7 +9,7 @@ sourceFile: A Juan le importa demasiado.docx
 
 A Juan le importa demasiado
 
-¿Pero qué es lo quee le importa demasiado? Es fácil, las cosas importantes. Quiero decir, a Juan le da igual si el volumen de la tele es impar o si su casa está desorganizada. Le importa la gente, le importa cualquier movimiento facial de la gente que se cruza por el por la calle. Ve todo y lo absorbe. Para Juan caminar por la calle es otra cosa. Cuando sale de su casa ve a su derecha una mujer que arrastra su maleta gigante en las escaleras, pero no sabe si ir a ayudarla o no porque tampoco la quiero molestar y luego se queda atascado unos segundos echando miradas hacia atrás mientras está pensando si debe dar la vuelta y ayudarle o no, y eso le pasa ¿nada más salir de su casa!
+¿Pero qué es lo quee le importa demasiado? Es fácil, las cosas importantes. Quiero decir, a Juan le da igual si el volumen de la tele es impar o si su casa está desorganizada. Le importa la gente, le importa cualquier movimiento facial de la gente que se cruza con el por la calle. Ve todo y lo absorbe. Para Juan caminar por la calle es otra cosa. Cuando sale de su casa ve a su derecha una mujer que arrastra su maleta gigante en las escaleras, pero no sabe si ir a ayudarla o no porque tampoco la quiere molestar y luego se queda atascado unos segundos echando miradas hacia atrás mientras está pensando si debe dar la vuelta y ayudarle o no, y eso le pasa ¿nada más salir de su casa!
 
 Además, piensa mucho como acabáis de ver, y lo hace sobre las cosas más minúsculas como el señor que pide dinero a la salida del supermercado.
 

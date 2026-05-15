@@ -9,6 +9,8 @@
     "preview": "astro preview --host 127.0.0.1",
     "test": "node --test src/lib/*.test.mjs",
     "import:stories": "node scripts/import-stories.mjs",
+    "import:incoming": "node scripts/import-stories.mjs incoming",
+    "update:story": "node scripts/update-story.mjs",
     "normalize:stories": "node scripts/normalize-stories.mjs"
   },
   "dependencies": {

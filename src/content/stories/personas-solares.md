@@ -11,4 +11,4 @@ Hay varios tipos de personas en el mundo. También hay varios tipos de cuerpos c
 
 Una persona solar es alguien que no necesita la energía de los demás para brillar y tiene la capacidad de calentar a todo so entorno sin hacer ningún esfuerzo.
 
-Son personas que cuando ríen, lo hacen con todo el corazón y lo hacen con tanto entusiasmo que da envidia y contagia a toda la gente a su alrededor y así iluminan el mundo. Su forma de contar una historia o de pasar un buen momento es como los niños pequeños que todavía no han conocido los aspectos menos agradables de la vida como el cinismo. Son personas optimistas y empáticas que dejan tres ellas un rastro de oxigeno como un árbol que hace la fotosíntesis.
+Son personas que cuando ríen, lo hacen con todo el corazón y lo hacen con tanto entusiasmo que da envidia y contagia a toda la gente a su alrededor y así iluminan el mundo. Su forma de contar una historia o de pasar un buen momento es como los niños pequeños que todavía no han conocido los aspectos menos agradables de la vida como el cinismo. Son personas optimistas y empáticas que dejan tras ellas un rastro de oxigeno como un árbol que hace la fotosíntesis.

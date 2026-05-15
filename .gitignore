@@ -6,3 +6,5 @@ dist/
 .superpowers/
 docs/superpowers/
 *.log
+incoming/*
+!incoming/README.md
