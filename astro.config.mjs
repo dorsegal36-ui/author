@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://example.netlify.app',
+  site: process.env.SITE_URL || 'https://dorsegal36-ui.github.io',
+  base: process.env.BASE_PATH || '/author',
   trailingSlash: 'never'
 });

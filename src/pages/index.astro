@@ -6,6 +6,7 @@ import { formatWrittenYear } from '@/lib/storyDates.mjs';
 const stories = await getPublishedStories();
 const groups = storiesByLanguage(stories);
 const recent = stories.slice(0, 5);
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="Stories">
@@ -18,7 +19,7 @@ const recent = stories.slice(0, 5);
     <div class="language-grid" aria-label="Story languages">
       {
         groups.map((group) => (
-          <a class="language-card" href={`/library#${group.language}`}>
+          <a class="language-card" href={`${basePath}/library#${group.language}`}>
             <strong>{group.label}</strong>
             <span>
               {group.stories.length} {group.stories.length === 1 ? 'story' : 'stories'}
@@ -32,7 +33,7 @@ const recent = stories.slice(0, 5);
     <div class="story-list">
       {
         recent.map((story) => (
-          <a class="story-card" href={`/stories/${getStorySlug(story)}`}>
+          <a class="story-card" href={`${basePath}/stories/${getStorySlug(story)}`}>
             <strong>{story.data.title}</strong>
             <span>{languageLabels[story.data.language]} | {formatWrittenYear(story.data.writtenAt)}</span>
           </a>

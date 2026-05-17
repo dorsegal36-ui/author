@@ -8,6 +8,7 @@ interface Props {
 
 const { title, description = 'A multilingual archive of short stories.' } = Astro.props;
 const pageTitle = title === 'Stories' ? title : `${title} | Stories`;
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <!doctype html>
@@ -17,7 +18,7 @@ const pageTitle = title === 'Stories' ? title : `${title} | Stories`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{pageTitle}</title>
-    <script is:inline>
+    <script is:inline define:vars={{ basePath }}>
       const adminAuthTokens = [
         'invite_token=',
         'confirmation_token=',
@@ -29,15 +30,15 @@ const pageTitle = title === 'Stories' ? title : `${title} | Stories`;
         window.location.hash &&
         adminAuthTokens.some((token) => window.location.hash.includes(token))
       ) {
-        window.location.replace(`/admin/index.html${window.location.hash}`);
+        window.location.replace(`${basePath}/admin/index.html${window.location.hash}`);
       }
     </script>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="/">Stories</a>
+      <a class="brand" href={`${basePath}/`}>Stories</a>
       <nav aria-label="Primary navigation">
-        <a href="/library">Library</a>
+        <a href={`${basePath}/library`}>Library</a>
       </nav>
     </header>
     <main>
