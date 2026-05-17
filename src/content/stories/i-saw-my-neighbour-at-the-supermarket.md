@@ -3,7 +3,7 @@ title: "I saw my neighbour at the supermarket"
 language: "english"
 writtenAt: "2026-05-16"
 publishedAt: "2026-05-17"
-draft: true
+draft: false
 sourceFile: "I saw my neighbour at the supermarket.txt"
 ---
 
@@ -33,6 +33,16 @@ Then he usually throws a few curses into the air and turns on the TV. There's ne
 
 A friend gave it to me for my birthday. I remember driving the nails in and thinking they might come out of the other side of the wall. "Give me your smallest nails please," I told the guy at the hardware store.
 
-Here enters my version of hearing other people voices in his apartment and looking throguh the peephole to try and find out who's that person.
+On weekends and holidays something different happens. He's usually louder and constnaly coming in and out of the apartment while always maintaining the key ceremony. I remember very well the first time I heard a feminine voice on the other side of the wall, "it must be a prostitute," I told myself. I pressed my ear against the wall. She was laguhing a lot. "She must be really ugly. Something must be wrong about her," I thought. I couldn't understand anything they said, but it seems like they were having a good time. While I was there listening I thought of how my ex told me once that I should be careful not to become like him. It seemed unlikely to me back then, but I didn't like the idea.
 
-We usually greeted each other quickly when we passed by at the staircase until christmas two years ago. I had already broken up with my girlfriend and she moved to a different city. I noticed that my neighbour didn't wake up early for work for a few days in a row. Instead he was playing video games until late at night. I couldn't sleep well during that period, but I took advantage of this to play the piano until late. This was our new status quo. One night I practiced a new piece by Yann Tiersen. It was around midnight.
+The second time I heard a woman approaching his apartemnt I ran to the peephole. I saw him wearing his leather gloves, and next to him was a young girl. They were in his apartment for about an hour and then she left. The TV was on the whole time in the background. "I've been living here for ten years," he told me once. "Then I met a girl. We got married and had a kid. We got divorced, and then I came back here to the same apartment." I didn't ask for this information and I didn't know what to answer so I just shook my head. That was probably the most intimate conversation we have ever had.
+
+"Don't stop, don't stop!" She said. "Feel free to moan louder." I said and then made a big effort to make some more noise. "Your neighbours will wake up," she whispered. I don't even remember her name. "That's fine," I said. "He makes noise all the time," and I kept going. After that, whenever I brought someone home I liked knowing he could hear us through the wall.
+
+We usually greeted each other quickly when we passed by at the staircase until christmas two years ago. I had already broken up with my girlfriend and she moved to a different city. I noticed that my neighbour didn't wake up early for work for a few days in a row. Instead he was playing video games until late at night. I couldn't sleep well during that period, but I took advantage of this to play the piano until late. This was our new status quo. One night I practiced a new piece. It was around midnight. I reached a passage where I couldn't get my two hands play at the same pace. I repeated this passage over and over until I heard, "stop with the fucking piano you piece of shit!
+
+I'm gonna kill you for fucks sake!" These screams were accompanied by fists being thrown at the wall. I froze. "Are you talking to me?" I said after a while and walked towards the wall. "Trust me you don't want to be my enemy. You'll see," he said. "Are you serious?" I asked. "Why are you hitting my wall.
+
+Why can't you knock on my door like a civilized person and ask me to stop making noise?" "You were the one who started. I'm fucking trying to sleep," he said. "You don't know what I'm capable of doing. Wait for tomorrow morning." I looked at my baseball bat leaning against the wall and said, "Look, I didn't mean to bother you. I didn't know you were trying to sleep." I couldn't say "I'm sorry." "You made a big mistake," he said, and then there was a silence. I stayed next to the wall for a couple of minutes and then went to the living room.
+
+My hands were shaking. I tried to call a friend, but there was no answer. I could barely sleep that night and I set an alarm for 5:30. My alarm went on and I heard steps on the other side of the wall. Then the radio went on. I went out of bed and prepared myself. After a while I heard the lock turning three times and then again after the door closed. I ran to the window and waited to see him pass by on the street. He was wearing a black bandana on his head and I saw a shining chain hanging from his pants. Then he walked away.
