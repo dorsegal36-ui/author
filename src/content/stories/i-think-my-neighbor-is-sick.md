@@ -3,7 +3,7 @@ title: "I think my neighbor is sick"
 language: "english"
 writtenAt: "2024-02-12"
 publishedAt: "2026-05-13"
-draft: false
+draft: true
 sourceFile: "I think my neighbor is sick.docx"
 ---
 
