@@ -5,28 +5,205 @@ interface Props {
 }
 
 const { pageIdentifier, pageTitle } = Astro.props;
-const shortname = import.meta.env.PUBLIC_DISQUS_SHORTNAME;
+const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+const isConfigured = Boolean(supabaseUrl && supabaseAnonKey);
 ---
 
+<section
+  class="comments"
+  aria-labelledby="comments-title"
+  data-comments-root
+  data-story-slug={pageIdentifier}
+  data-page-title={pageTitle}
+  data-supabase-url={supabaseUrl}
+  data-supabase-anon-key={supabaseAnonKey}
+>
+  <h2 id="comments-title" class="section-title">Comments</h2>
+
+  {
+    isConfigured ? (
+      <>
+        <div class="comment-status" data-comment-status>Loading comments...</div>
+        <div class="comment-list" data-comment-list></div>
+        <form class="comment-form" data-comment-form>
+          <label class="comment-field">
+            <span>Name <small>optional</small></span>
+            <input name="authorName" type="text" maxlength="80" autocomplete="name" />
+          </label>
+          <label class="comment-field">
+            <span>Comment</span>
+            <textarea name="body" maxlength="2000" rows="5" required></textarea>
+          </label>
+          <label class="honeypot">
+            Website
+            <input name="website" type="text" tabindex="-1" autocomplete="off" />
+          </label>
+          <div class="comment-actions">
+            <button type="submit">Post comment</button>
+            <span class="comment-status" data-submit-status aria-live="polite"></span>
+          </div>
+        </form>
+      </>
+    ) : (
+      <p class="comment-status">Comments are not configured yet.</p>
+    )
+  }
+</section>
+
 {
-  shortname ? (
-    <>
-      <div id="disqus_thread" data-page-id={pageIdentifier} data-page-title={pageTitle}></div>
-      <script is:inline define:vars={{ shortname, pageIdentifier, pageTitle }}>
-        window.disqus_config = function () {
-          this.page.identifier = pageIdentifier;
-          this.page.title = pageTitle;
-          this.page.url = window.location.href;
+  isConfigured && (
+    <script>
+      import { createClient } from '@supabase/supabase-js';
+      import { displayAuthorName, normalizeCommentInput } from '../lib/comments.mjs';
+
+      type CommentRow = {
+        id?: string;
+        author_name: string | null;
+        body: string;
+        created_at: string;
+      };
+
+      const dateFormatter = new Intl.DateTimeFormat('en', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      });
+
+      function formatDate(value: string) {
+        const date = new Date(value);
+        return Number.isNaN(date.getTime()) ? '' : dateFormatter.format(date);
+      }
+
+      function renderComment(comment: CommentRow) {
+        const article = document.createElement('article');
+        article.className = 'comment';
+
+        const header = document.createElement('header');
+        const author = document.createElement('strong');
+        const time = document.createElement('time');
+        const body = document.createElement('p');
+
+        author.textContent = displayAuthorName(comment.author_name);
+        time.dateTime = comment.created_at;
+        time.textContent = formatDate(comment.created_at);
+        body.textContent = comment.body;
+
+        header.append(author, time);
+        article.append(header, body);
+        return article;
+      }
+
+      function renderComments(list: HTMLElement, comments: CommentRow[]) {
+        list.replaceChildren();
+
+        for (const comment of comments) {
+          list.append(renderComment(comment));
+        }
+      }
+
+      for (const root of document.querySelectorAll('[data-comments-root]')) {
+        if (!(root instanceof HTMLElement)) {
+          continue;
+        }
+
+        const supabaseUrl = root.dataset.supabaseUrl;
+        const supabaseAnonKey = root.dataset.supabaseAnonKey;
+        const storySlug = root.dataset.storySlug;
+        const list = root.querySelector('[data-comment-list]');
+        const loadStatus = root.querySelector('[data-comment-status]');
+        const submitStatus = root.querySelector('[data-submit-status]');
+        const form = root.querySelector('[data-comment-form]');
+        const submitButton = form?.querySelector('button[type="submit"]');
+
+        if (
+          !storySlug ||
+          !supabaseUrl ||
+          !supabaseAnonKey ||
+          !(list instanceof HTMLElement) ||
+          !(loadStatus instanceof HTMLElement) ||
+          !(submitStatus instanceof HTMLElement) ||
+          !(form instanceof HTMLFormElement) ||
+          !(submitButton instanceof HTMLButtonElement)
+        ) {
+          continue;
+        }
+
+        const commentsList = list;
+        const commentsStatus = loadStatus;
+        const commentForm = form;
+        const commentSubmitButton = submitButton;
+        const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+        const setSubmitStatus = (message: string) => {
+          submitStatus.textContent = message;
         };
 
-        const script = document.createElement('script');
-        script.src = `https://${shortname}.disqus.com/embed.js`;
-        script.setAttribute('data-timestamp', String(Date.now()));
-        document.body.appendChild(script);
-      </script>
-      <noscript>Please enable JavaScript to view comments.</noscript>
-    </>
-  ) : (
-    <p class="lede">Comments will appear here after Disqus is configured.</p>
+        async function loadComments() {
+          const { data, error } = await supabase
+            .from('comments')
+            .select('id, author_name, body, created_at')
+            .eq('story_slug', storySlug)
+            .order('created_at', { ascending: true });
+
+          if (error) {
+            commentsStatus.textContent = 'Comments could not be loaded.';
+            return;
+          }
+
+          renderComments(commentsList, data ?? []);
+          commentsStatus.textContent = data?.length ? '' : 'No comments yet.';
+        }
+
+        commentForm.addEventListener('submit', async (event) => {
+          event.preventDefault();
+
+          const formData = new FormData(commentForm);
+          if (formData.get('website')) {
+            return;
+          }
+
+          const normalized = normalizeCommentInput({
+            storySlug,
+            authorName: formData.get('authorName'),
+            body: formData.get('body')
+          });
+
+          if (!normalized.ok) {
+            setSubmitStatus(normalized.error ?? 'Comment could not be posted. Try again later.');
+            return;
+          }
+
+          const payload = normalized.value;
+          if (!payload) {
+            setSubmitStatus('Comment could not be posted. Try again later.');
+            return;
+          }
+
+          commentSubmitButton.disabled = true;
+          setSubmitStatus('Posting...');
+
+          const { data, error } = await supabase
+            .from('comments')
+            .insert(payload)
+            .select('id, author_name, body, created_at')
+            .single();
+
+          commentSubmitButton.disabled = false;
+
+          if (error) {
+            setSubmitStatus('Comment could not be posted. Try again later.');
+            return;
+          }
+
+          commentForm.reset();
+          commentsList.append(renderComment(data));
+          commentsStatus.textContent = '';
+          setSubmitStatus('Posted.');
+        });
+
+        loadComments();
+      }
+    </script>
   )
 }
