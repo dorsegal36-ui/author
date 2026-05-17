@@ -29,6 +29,10 @@ export function yamlEscape(value) {
   return String(value).replace(/\\/g, '\\\\').replace(/"/g, '\\"');
 }
 
+export function createStoryMarkdown({ title, language, writtenAt, publishedAt, sourceFile, body }) {
+  return `---\ntitle: "${yamlEscape(title)}"\nlanguage: "${language}"\nwrittenAt: "${writtenAt}"\npublishedAt: "${publishedAt}"\ndraft: true\nsourceFile: "${yamlEscape(sourceFile)}"\n---\n\n${body}\n`;
+}
+
 export function detectLanguage(filename, text) {
   const sample = `${filename}\n${text.slice(0, 500)}`;
   if (hebrewPattern.test(sample)) return 'hebrew';

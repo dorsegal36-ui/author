@@ -3,11 +3,11 @@ import path from 'node:path';
 import process from 'node:process';
 import { normalizeStoryText } from '../src/lib/normalizeStoryText.mjs';
 import {
+  createStoryMarkdown,
   detectLanguage,
   readStory,
   slugify,
-  supportedStoryExtensions,
-  yamlEscape
+  supportedStoryExtensions
 } from './story-import-utils.mjs';
 
 const root = process.cwd();
@@ -55,7 +55,14 @@ async function main() {
 
     const body = normalizeStoryText(raw);
     const writtenAt = stats.mtime.toISOString().slice(0, 10);
-    const markdown = `---\ntitle: "${yamlEscape(title)}"\nlanguage: "${language}"\nwrittenAt: "${writtenAt}"\npublishedAt: "${today}"\ndraft: false\nsourceFile: "${yamlEscape(filename)}"\n---\n\n${body}\n`;
+    const markdown = createStoryMarkdown({
+      title,
+      language,
+      writtenAt,
+      publishedAt: today,
+      sourceFile: filename,
+      body
+    });
 
     await fs.writeFile(outputPath, markdown, 'utf8');
     console.log(`Imported ${filename} -> ${slug}.md`);
