@@ -1,6 +1,7 @@
 ---
 title: "ניסוי כלים"
 language: "hebrew"
+author: "Dor Segal"
 writtenAt: "2023-08-20"
 publishedAt: "2026-05-13"
 draft: false

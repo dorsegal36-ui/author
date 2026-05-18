@@ -1,6 +1,7 @@
 ---
 title: "Viena waits for you"
 language: "english"
+author: "Dor Segal"
 writtenAt: "2025-04-13"
 publishedAt: "2026-05-13"
 draft: true

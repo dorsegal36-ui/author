@@ -1,6 +1,7 @@
 ---
 title: "Memorias del abuelo - 3 - Un pañuelo negro"
 language: "spanish"
+author: "Dor Segal"
 writtenAt: "2026-05-14"
 publishedAt: "2026-05-14"
 draft: false

@@ -1,6 +1,7 @@
 ---
 title: "El peor enemigo"
 language: "spanish"
+author: "Dor Segal"
 writtenAt: "2025-06-03"
 publishedAt: "2026-05-14"
 draft: false

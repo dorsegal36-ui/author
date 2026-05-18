@@ -1,6 +1,7 @@
 ---
 title: "Personas solares"
 language: "spanish"
+author: "Dor Segal"
 writtenAt: "2025-04-11"
 publishedAt: "2026-05-13"
 draft: true

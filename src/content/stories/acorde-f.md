@@ -1,6 +1,7 @@
 ---
 title: "Acorde F"
 language: "spanish"
+author: "Dor Segal"
 writtenAt: "2024-02-09"
 publishedAt: "2026-05-13"
 draft: false

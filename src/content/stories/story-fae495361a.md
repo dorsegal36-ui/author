@@ -1,6 +1,7 @@
 ---
 title: "דמויות"
 language: "hebrew"
+author: "Dor Segal"
 writtenAt: "2026-05-14"
 publishedAt: "2026-05-14"
 draft: false

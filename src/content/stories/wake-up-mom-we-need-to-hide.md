@@ -1,6 +1,7 @@
 ---
 title: "Wake up mom. We need to hide."
 language: "english"
+author: "Dor Segal"
 writtenAt: "2026-05-15"
 publishedAt: "2026-05-17"
 draft: true

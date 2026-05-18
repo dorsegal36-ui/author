@@ -4,6 +4,7 @@ import path from 'node:path';
 import mammoth from 'mammoth';
 import AdmZip from 'adm-zip';
 import { XMLParser } from 'fast-xml-parser';
+import { DEFAULT_AUTHOR, normalizeAuthorName } from '../src/lib/storyAuthors.mjs';
 
 const hebrewPattern = /[\u0590-\u05ff]/;
 const spanishPattern = /[áéíóúñü¿¡ÁÉÍÓÚÑÜÃ¡Ã©Ã­Ã³ÃºÃ±Ã¼Â¿Â¡ÃÃ‰ÃÃ“ÃšÃ‘Ãœ]/;
@@ -29,8 +30,21 @@ export function yamlEscape(value) {
   return String(value).replace(/\\/g, '\\\\').replace(/"/g, '\\"');
 }
 
-export function createStoryMarkdown({ title, language, writtenAt, publishedAt, sourceFile, body }) {
-  return `---\ntitle: "${yamlEscape(title)}"\nlanguage: "${language}"\nwrittenAt: "${writtenAt}"\npublishedAt: "${publishedAt}"\ndraft: true\nsourceFile: "${yamlEscape(sourceFile)}"\n---\n\n${body}\n`;
+export function createStoryMarkdown({
+  title,
+  language,
+  author = DEFAULT_AUTHOR,
+  writtenAt,
+  publishedAt,
+  sourceFile,
+  body
+}) {
+  const normalizedAuthor = normalizeAuthorName(author);
+  const authorLine = normalizedAuthor
+    ? `author: "${yamlEscape(normalizedAuthor)}"\n`
+    : 'author: null\n';
+
+  return `---\ntitle: "${yamlEscape(title)}"\nlanguage: "${language}"\n${authorLine}writtenAt: "${writtenAt}"\npublishedAt: "${publishedAt}"\ndraft: true\nsourceFile: "${yamlEscape(sourceFile)}"\n---\n\n${body}\n`;
 }
 
 export function detectLanguage(filename, text) {

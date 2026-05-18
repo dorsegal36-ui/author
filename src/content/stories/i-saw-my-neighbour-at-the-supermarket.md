@@ -1,6 +1,7 @@
 ---
 title: "I saw my neighbour at the supermarket"
 language: "english"
+author: "Dor Segal"
 writtenAt: "2026-05-16"
 publishedAt: "2026-05-17"
 draft: false

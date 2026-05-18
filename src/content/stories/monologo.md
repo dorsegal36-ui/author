@@ -1,6 +1,7 @@
 ---
 title: "monologo"
 language: "hebrew"
+author: "Dor Segal"
 writtenAt: "2024-02-06"
 publishedAt: "2026-05-13"
 draft: false

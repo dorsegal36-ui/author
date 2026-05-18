@@ -1,6 +1,7 @@
 ---
 title: Memorias del abuelo - 2 - Un viaje hacia el sol
 language: spanish
+author: "Dor Segal"
 writtenAt: 2026-03-04
 publishedAt: 2026-05-14
 draft: false

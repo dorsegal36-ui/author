@@ -1,6 +1,7 @@
 ---
 title: "I'm finally back home "
 language: "english"
+author: "Dor Segal"
 writtenAt: "2026-05-14"
 publishedAt: 2026-05-13
 draft: false

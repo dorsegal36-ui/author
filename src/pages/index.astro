@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { getPublishedStories, getStorySlug, languageLabels, storiesByLanguage } from '@/lib/stories';
+import { getPublishedStories, getStoryAuthor, getStorySlug, languageLabels, storiesByLanguage } from '@/lib/stories';
 import { formatWrittenYear } from '@/lib/storyDates.mjs';
 
 const stories = await getPublishedStories();
@@ -35,7 +35,7 @@ const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
         recent.map((story) => (
           <a class="story-card" href={`${basePath}/stories/${getStorySlug(story)}`}>
             <strong>{story.data.title}</strong>
-            <span>{languageLabels[story.data.language]} | {formatWrittenYear(story.data.writtenAt)}</span>
+            <span>{getStoryAuthor(story)} | {languageLabels[story.data.language]} | {formatWrittenYear(story.data.writtenAt)}</span>
           </a>
         ))
       }

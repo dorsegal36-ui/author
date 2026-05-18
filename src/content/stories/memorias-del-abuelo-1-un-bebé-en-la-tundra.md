@@ -1,6 +1,7 @@
 ---
 title: Memorias del abuelo - 1 - Un bebé en la tundra
 language: spanish
+author: "Dor Segal"
 writtenAt: 2026-02-04
 publishedAt: 2026-05-14
 draft: false

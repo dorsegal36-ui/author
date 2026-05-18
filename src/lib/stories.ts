@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { displayAuthorName } from './storyAuthors.mjs';
 
 export type Story = CollectionEntry<'stories'>;
 export type StoryLanguage = Story['data']['language'];
@@ -17,6 +18,10 @@ export function isRtl(language: StoryLanguage) {
 
 export function getStorySlug(story: Story) {
   return story.id.replace(/\.md$/, '');
+}
+
+export function getStoryAuthor(story: Story) {
+  return displayAuthorName(story.data.author);
 }
 
 export async function getPublishedStories() {

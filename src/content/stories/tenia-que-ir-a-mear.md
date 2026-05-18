@@ -1,6 +1,7 @@
 ---
 title: "Tenía que ir a mear"
 language: "spanish"
+author: "Dor Segal"
 writtenAt: "2026-05-10"
 publishedAt: "2026-05-13"
 draft: false

@@ -5,6 +5,7 @@ const stories = defineCollection({
   schema: z.object({
     title: z.string(),
     language: z.enum(['english', 'spanish', 'hebrew']),
+    author: z.string().nullable().optional(),
     writtenAt: z.coerce.date(),
     publishedAt: z.coerce.date(),
     draft: z.boolean().default(false),
