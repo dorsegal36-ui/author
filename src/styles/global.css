@@ -166,6 +166,40 @@ a {
   text-decoration: none;
 }
 
+.library-search {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 1.75rem;
+  font-family: system-ui, sans-serif;
+}
+
+.library-search label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.library-search input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  padding: 0.75rem 0.85rem;
+}
+
+.library-search p,
+.no-results {
+  margin: 0;
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+
+.no-results {
+  margin-top: 2rem;
+}
+
 .back-link {
   display: inline-block;
   margin-bottom: 2rem;

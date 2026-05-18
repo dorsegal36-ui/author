@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getPublishedStories, getStoryAuthor, getStorySlug, languageLabels, storiesByLanguage } from '@/lib/stories';
 import { formatWrittenYear } from '@/lib/storyDates.mjs';
+import { storySearchText } from '@/lib/storySearch.mjs';
 
 const stories = await getPublishedStories();
 const groups = storiesByLanguage(stories);
@@ -13,13 +14,19 @@ const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
     <h1>Library</h1>
     <p class="lede">Browse the archive by language.</p>
 
+    <div class="library-search">
+      <label for="story-search">Search stories</label>
+      <input id="story-search" type="search" placeholder="Search by title or author" autocomplete="off" />
+      <p id="story-search-status" aria-live="polite">{stories.length} stories</p>
+    </div>
+
     <nav class="filters" aria-label="Language filters">
       {groups.map((group) => <a href={`#${group.language}`}>{group.label}</a>)}
     </nav>
 
     {
       groups.map((group) => (
-        <section id={group.language}>
+        <section id={group.language} data-story-group>
           <h2 class="section-title">{group.label}</h2>
           <div class="story-list">
             {group.stories.map((story) => (
@@ -27,6 +34,8 @@ const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
                 class="story-card"
                 href={`${basePath}/stories/${getStorySlug(story)}`}
                 dir={story.data.language === 'hebrew' ? 'rtl' : 'ltr'}
+                data-story-card
+                data-search={storySearchText({ title: story.data.title, author: getStoryAuthor(story) })}
               >
                 <strong>{story.data.title}</strong>
                 <span>{getStoryAuthor(story)} | {languageLabels[story.data.language]} | {formatWrittenYear(story.data.writtenAt)}</span>
@@ -36,5 +45,46 @@ const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
         </section>
       ))
     }
+    <p class="no-results" data-no-results hidden>No stories found.</p>
   </section>
+
+  <script>
+    const searchInput = document.querySelector<HTMLInputElement>('#story-search');
+    const status = document.querySelector<HTMLElement>('#story-search-status');
+    const cards = Array.from(document.querySelectorAll<HTMLElement>('[data-story-card]'));
+    const groups = Array.from(document.querySelectorAll<HTMLElement>('[data-story-group]'));
+    const noResults = document.querySelector<HTMLElement>('[data-no-results]');
+
+    function normalizeSearchText(value: string) {
+      return value.trim().replace(/\s+/g, ' ').toLocaleLowerCase();
+    }
+
+    function updateSearchResults() {
+      const query = normalizeSearchText(searchInput?.value ?? '');
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const matches = !query || (card.dataset.search ?? '').includes(query);
+        card.hidden = !matches;
+        if (matches) {
+          visibleCount += 1;
+        }
+      });
+
+      groups.forEach((group) => {
+        const hasVisibleStory = Boolean(group.querySelector('[data-story-card]:not([hidden])'));
+        group.hidden = !hasVisibleStory;
+      });
+
+      if (status) {
+        status.textContent = `${visibleCount} ${visibleCount === 1 ? 'story' : 'stories'}`;
+      }
+
+      if (noResults) {
+        noResults.hidden = visibleCount > 0;
+      }
+    }
+
+    searchInput?.addEventListener('input', updateSearchResults);
+  </script>
 </BaseLayout>
