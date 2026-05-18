@@ -1,5 +1,3 @@
-const sentencePattern = /[^.!?…]+[.!?…]["')\]\u00bb\u201d\u2019]*|[^.!?…]+$/g;
-
 function cleanLine(line) {
   return line.replace(/\s+/g, ' ').trim();
 }
@@ -11,37 +9,11 @@ function looksLineBased(lines) {
   if (!lengths.length) return false;
 
   const average = lengths.reduce((sum, length) => sum + length, 0) / lengths.length;
-  const sentenceEndCount = lines.filter((line) => /[.!?…]["')\]\u00bb\u201d\u2019]?$/.test(cleanLine(line))).length;
+  const sentenceEndCount = lines.filter((line) =>
+    /[.!?…]["')\]\u00bb\u201d\u2019]?$/.test(cleanLine(line))
+  ).length;
 
   return average < 42 && sentenceEndCount < Math.ceil(lines.length / 2);
-}
-
-function splitSentences(text) {
-  return (text.match(sentencePattern) || [text])
-    .map((sentence) => cleanLine(sentence))
-    .filter(Boolean);
-}
-
-function groupSentences(sentences) {
-  const paragraphs = [];
-  let current = [];
-  let currentLength = 0;
-
-  for (const sentence of sentences) {
-    const nextLength = currentLength + sentence.length + (current.length ? 1 : 0);
-
-    if (current.length >= 10 || nextLength > 850) {
-      paragraphs.push(current.join(' '));
-      current = [];
-      currentLength = 0;
-    }
-
-    current.push(sentence);
-    currentLength += sentence.length + (current.length > 1 ? 1 : 0);
-  }
-
-  if (current.length) paragraphs.push(current.join(' '));
-  return paragraphs;
 }
 
 function normalizeBlock(block) {
@@ -49,11 +21,7 @@ function normalizeBlock(block) {
   if (!lines.length) return '';
   if (looksLineBased(lines)) return lines.join('\n');
 
-  const text = lines.join(' ');
-  const sentences = splitSentences(text);
-  if (sentences.length <= 3) return text;
-
-  return groupSentences(sentences).join('\n\n');
+  return lines.join(' ');
 }
 
 function isMergeableProse(paragraph) {

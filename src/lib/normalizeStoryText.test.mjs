@@ -24,6 +24,27 @@ test('normalizeStoryText turns hard-wrapped prose into longer readable paragraph
   );
 });
 
+test('normalizeStoryText does not invent paragraph breaks inside a long source paragraph', () => {
+  const raw = [
+    'The first sentence opens the same continuous paragraph.',
+    'The second sentence keeps developing that same thought.',
+    'The third sentence still belongs to the same source paragraph.',
+    'The fourth sentence should not be split away by length.',
+    'The fifth sentence continues without a blank line in the source.',
+    'The sixth sentence is still part of the same reading unit.',
+    'The seventh sentence should remain attached to the others.',
+    'The eighth sentence makes the paragraph long enough to expose the bug.',
+    'The ninth sentence is not a new paragraph just because it is late.',
+    'The tenth sentence continues the source paragraph.',
+    'The eleventh sentence closes the source paragraph.'
+  ].join('\n');
+
+  assert.equal(
+    normalizeStoryText(raw),
+    'The first sentence opens the same continuous paragraph. The second sentence keeps developing that same thought. The third sentence still belongs to the same source paragraph. The fourth sentence should not be split away by length. The fifth sentence continues without a blank line in the source. The sixth sentence is still part of the same reading unit. The seventh sentence should remain attached to the others. The eighth sentence makes the paragraph long enough to expose the bug. The ninth sentence is not a new paragraph just because it is late. The tenth sentence continues the source paragraph. The eleventh sentence closes the source paragraph.'
+  );
+});
+
 test('normalizeStoryText preserves short line-based text', () => {
   const raw = 'first line\nsecond line\nthird line';
 
