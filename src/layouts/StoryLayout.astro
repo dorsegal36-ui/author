@@ -9,11 +9,6 @@ interface Props {
 
 const { story } = Astro.props;
 const direction = isRtl(story.data.language) ? 'rtl' : 'ltr';
-const published = story.data.publishedAt.toLocaleDateString('en', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric'
-});
 const writtenYear = formatWrittenYear(story.data.writtenAt);
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
 const author = getStoryAuthor(story);
@@ -23,7 +18,7 @@ const author = getStoryAuthor(story);
   <article class="story-page" dir={direction}>
     <a class="back-link" href={`${basePath}/library`}>Back to library</a>
     <header class="story-heading">
-      <p class="eyebrow">{author} | {languageLabels[story.data.language]} | {published}</p>
+      <p class="eyebrow">{author} | {languageLabels[story.data.language]}</p>
       <h1>{story.data.title}</h1>
       <p class="story-year">{writtenYear}</p>
     </header>
