@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Story Site Visual Directions</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f0e8;
+        --ink: #171614;
+        --muted: #6d655d;
+        --line: #d5c8b8;
+        --paper: #fffdf8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 44px 0;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 760px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.5rem, 5vw, 4.8rem);
+        font-weight: 500;
+        line-height: 0.96;
+      }
+
+      .lede {
+        max-width: 720px;
+        margin: 18px 0 34px;
+        color: var(--muted);
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .option {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--paper);
+      }
+
+      .preview {
+        min-height: 340px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .body {
+        padding: 18px;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 1.1rem;
+      }
+
+      p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .magazine {
+        min-height: 340px;
+        padding: 26px;
+        background: #f4efe6;
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      .magazine .nav {
+        margin-bottom: 52px;
+        font: 700 0.78rem/1 system-ui, sans-serif;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .magazine .title {
+        max-width: 440px;
+        font-size: 3.2rem;
+        line-height: 0.95;
+      }
+
+      .magazine .copy {
+        max-width: 360px;
+        margin-top: 18px;
+        color: #6a6058;
+        font-size: 1.05rem;
+        line-height: 1.5;
+      }
+
+      .magazine .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-top: 34px;
+      }
+
+      .magazine .mini {
+        border-top: 1px solid #cdbfaa;
+        padding-top: 12px;
+      }
+
+      .archive {
+        min-height: 340px;
+        padding: 26px;
+        background: #fbfaf6;
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      .archive .top {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #d7d7ce;
+        padding-bottom: 14px;
+        font: 0.85rem system-ui, sans-serif;
+      }
+
+      .archive .layout {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 24px;
+        margin-top: 28px;
+      }
+
+      .archive .side {
+        color: #6c6c61;
+        font: 0.82rem/2.2 system-ui, sans-serif;
+      }
+
+      .archive .heading {
+        font-size: 2.8rem;
+        line-height: 1;
+      }
+
+      .archive .row {
+        margin-top: 20px;
+        border-top: 1px solid #d7d7ce;
+        padding-top: 14px;
+      }
+
+      .warm {
+        min-height: 340px;
+        padding: 26px;
+        background: #f6f1e8;
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      .warm .top {
+        display: flex;
+        justify-content: space-between;
+        font: 0.85rem system-ui, sans-serif;
+      }
+
+      .warm .feature {
+        margin-top: 36px;
+        border: 1px solid #ddcdbb;
+        background: #fffdf8;
+        padding: 28px;
+        box-shadow: 0 16px 35px rgba(78, 55, 36, 0.12);
+      }
+
+      .warm .label {
+        color: #8f5f44;
+        font: 700 0.74rem/1 system-ui, sans-serif;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .warm .story {
+        margin-top: 14px;
+        font-size: 2.7rem;
+        line-height: 1.03;
+      }
+
+      @media (max-width: 900px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Pick a visual direction for the story site</h1>
+      <p class="lede">The current site is quiet and readable. These options keep that strength, but improve hierarchy, spacing, and personality.</p>
+
+      <section class="grid" aria-label="Visual directions">
+        <article class="option">
+          <div class="preview magazine">
+            <div class="nav">Stories</div>
+            <div class="title">A quiet place for short stories.</div>
+            <div class="copy">A multilingual archive shaped like a small literary magazine.</div>
+            <div class="cards">
+              <div class="mini">English<br /><small>5 stories</small></div>
+              <div class="mini">Spanish<br /><small>8 stories</small></div>
+            </div>
+          </div>
+          <div class="body">
+            <h2>Editorial Magazine</h2>
+            <p>Best fit if you want the site to feel literary, refined, and still very readable.</p>
+          </div>
+        </article>
+
+        <article class="option">
+          <div class="preview archive">
+            <div class="top"><strong>Stories</strong><span>Library / Admin</span></div>
+            <div class="layout">
+              <div class="side">All<br />English<br />Spanish<br />Hebrew</div>
+              <div>
+                <div class="heading">Library</div>
+                <div class="row">I think my neighbor is sick<br /><small>English | 2024</small></div>
+                <div class="row">Personas solares<br /><small>Spanish | 2025</small></div>
+              </div>
+            </div>
+          </div>
+          <div class="body">
+            <h2>Clean Archive</h2>
+            <p>Best fit if browsing and finding stories should feel organized, minimal, and almost library-like.</p>
+          </div>
+        </article>
+
+        <article class="option">
+          <div class="preview warm">
+            <div class="top"><strong>Stories</strong><span>Library</span></div>
+            <div class="feature">
+              <div class="label">Recent story</div>
+              <div class="story">Viena waits for you</div>
+              <p>Story pages feel like carefully set pages, with warmer contrast and gentle depth.</p>
+            </div>
+          </div>
+          <div class="body">
+            <h2>Warm Reading Room</h2>
+            <p>Best fit if you want the site to feel intimate, personal, and a little more tactile.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
