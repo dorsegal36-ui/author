@@ -12,15 +12,17 @@ const spanishPattern = /[áéíóúñü¿¡ÁÉÍÓÚÑÜÃ¡Ã©Ã­Ã³ÃºÃ�
 export const supportedStoryExtensions = new Set(['.txt', '.docx', '.odt']);
 
 export function slugify(value) {
-  const latinSlug = value
+  const slug = value
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/[^\w\s\u0590-\u05ff\-]+/g, '')
+    .trim()
+    .replace(/[\s_]+/g, '-')
     .replace(/^-+|-+$/g, '')
     .slice(0, 80);
 
-  if (latinSlug) return latinSlug;
+  if (slug) return slug;
 
   const hash = crypto.createHash('sha1').update(value).digest('hex').slice(0, 10);
   return `story-${hash}`;
